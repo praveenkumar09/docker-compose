@@ -1,0 +1,6 @@
+services:
+  ubuntu-vm:
+    image: ubuntu:latest
+    env_file:
+      - app.env
+    command: "env"

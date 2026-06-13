@@ -1,0 +1,17 @@
+services:
+  postgres-svc:
+    image: postgres:latest
+    container_name: postgres-svc
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: product_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+  adminer-svc:
+    image: adminer:latest
+    container_name: adminer-svc
+    ports:
+      - "8080:8080"

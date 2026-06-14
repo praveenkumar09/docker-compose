@@ -50,3 +50,4 @@ out/
 .env
 .env.local
 /.gitattributes
+/src/test/resources/data_vol/
